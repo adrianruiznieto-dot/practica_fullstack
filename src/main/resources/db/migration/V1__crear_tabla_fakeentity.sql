@@ -1,5 +1,5 @@
 -- fake_database.fake_entity definition
-
+USE `practica_final_backend`;
 CREATE TABLE `fake_entity` (
   `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(255) DEFAULT NULL,
