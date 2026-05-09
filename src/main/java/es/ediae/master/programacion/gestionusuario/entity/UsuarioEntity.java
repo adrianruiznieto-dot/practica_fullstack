@@ -42,45 +42,49 @@ public class UsuarioEntity {
     @JoinColumn(name = "genero_id", nullable = false)
      private GeneroEntity genero;
 
+    public Integer getId() {
+        return this.id;
+    }
+
     public String getNickUsuario () {
-        return nickUsuario;
+        return this.nickUsuario;
      }
     public void setNickUsuario(String nickUsuario) {
             this.nickUsuario = nickUsuario;
         }
     public LocalDateTime getFechaHoraCreacion() {
-            return fechaHoraCreacion;
+            return this.fechaHoraCreacion;
         }
     public void setFechaHoraCreacion(LocalDateTime fechaHoraCreacion) {
             this.fechaHoraCreacion = fechaHoraCreacion;
         }
     public String getNombre() {
-            return nombre;
+            return this.nombre;
         }
     public void setNombre(String nombre) {
             this.nombre = nombre;
         }
     public String getPrimerApellido() {
-            return primerApellido;
+            return this.primerApellido;
         }
     public void setPrimerApellido(String primerApellido) {
             this.primerApellido = primerApellido;
         }
         
     public String getSegundoApellido() {
-            return segundoApellido;
+            return this.segundoApellido;
         }
     public void setSegundoApellido(String segundoApellido) {
             this.segundoApellido = segundoApellido;
         }
     public LocalDateTime getFechaNacimiento() {
-            return fechaNacimiento;
+            return this.fechaNacimiento;
         }
     public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
             this.fechaNacimiento = fechaNacimiento;
         }
     public Time getHoraDesayuno() {
-            return horaDesayuno;
+            return this.horaDesayuno;
         }
     public void setHoraDesayuno(Time horaDesayuno) {
             this.horaDesayuno = horaDesayuno;
