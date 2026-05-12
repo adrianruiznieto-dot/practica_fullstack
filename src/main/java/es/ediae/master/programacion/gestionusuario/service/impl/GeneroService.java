@@ -10,7 +10,13 @@ public class GeneroService {
     public boolean esGeneroValido(String genero) {
         return GENERO_MASCULINO.equalsIgnoreCase(genero) || GENERO_FEMENINO.equalsIgnoreCase(genero);   
     }
+    public String obtenerGenero(String genero) {
+        if (esGeneroValido(genero)) {
+            return genero.equalsIgnoreCase(GENERO_MASCULINO) ? GENERO_MASCULINO : GENERO_FEMENINO;
+        }
+        return null; 
 
     }
+}
 
 

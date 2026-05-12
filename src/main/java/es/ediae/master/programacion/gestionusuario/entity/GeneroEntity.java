@@ -5,21 +5,31 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-
+@Table(name = "genero")
 public class GeneroEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "nombre_genero", nullable = false)
-    private String nombreGenero;
 
-    public String getNombreGenero() {
-        return nombreGenero;
+    @Column(name = "nombre", nullable = false)
+    private String nombre;
+
+    public Integer getId() {
+        return id;
     }
-    public void setNombreGenero(String nombreGenero) {
-        this.nombreGenero = nombreGenero;
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 }
