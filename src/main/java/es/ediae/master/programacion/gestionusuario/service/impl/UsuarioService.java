@@ -58,13 +58,12 @@ public class UsuarioService implements IUsuarioServices {
                 .map(usuarioExistente -> {
                     usuarioExistente.setNickUsuario(usuarioActualizado.getNickUsuario());
                     usuarioExistente.setContrasena(usuarioActualizado.getContrasena());
-                    usuarioExistente.setFechaNacimiento(usuarioActualizado.getFechaNacimiento());
                     usuarioExistente.setGenero(usuarioActualizado.getGenero());
                     usuarioExistente.setNombre(usuarioActualizado.getNombre());
                     usuarioExistente.setApellido(usuarioActualizado.getApellido());
-                    usuarioExistente.setHoraDesayuno(usuarioActualizado.getHoraDesayuno());
-                    usuarioExistente.setPuestoTrabajo(usuarioActualizado.getPuestoTrabajo());
+                    usuarioExistente.setEmail(usuarioActualizado.getEmail());
                     usuarioExistente.setDireccion(usuarioActualizado.getDireccion());
+                    usuarioExistente.setPuestoTrabajo(usuarioActualizado.getPuestoTrabajo());
                     return usuarioRepository.save(usuarioExistente);
                 });
     }

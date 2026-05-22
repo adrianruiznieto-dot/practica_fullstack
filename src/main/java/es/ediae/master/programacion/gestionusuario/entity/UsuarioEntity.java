@@ -10,6 +10,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "usuario")
@@ -18,7 +21,7 @@ public class UsuarioEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column (nullable = false)
+    @Column(name = "nick_usuario", nullable = false)
     private String nickUsuario;
 
     @Column(nullable = false)
@@ -29,9 +32,12 @@ public class UsuarioEntity {
     private String email;
     @Column(nullable = false)
     private String contrasena;
-    @Column(name = "fecha_creacion", nullable = false)
+
+    @CreationTimestamp
+    @Column(name = "fecha_hora_creacion", nullable = false, updatable = false)
     private LocalDateTime fechaCreacion;
-    @Column(name = "direccion", nullable = false)
+
+    @Transient
     private String direccion;
 
     
@@ -117,32 +123,12 @@ public class UsuarioEntity {
 
 
 
-    public void setGenero(Object genero) {
-        throw new UnsupportedOperationException("Unimplemented method 'setGenero'");
-    }
-
     public String getNickUsuario() {
-        throw new UnsupportedOperationException("Unimplemented method 'getNickUsuario'");
+        return this.nickUsuario;
     }
 
-    public void setNickUsuario(String nickUsuario2) {
-        throw new UnsupportedOperationException("Unimplemented method 'setNickUsuario'");
-    }
-
-    public Object getFechaNacimiento() {
-        throw new UnsupportedOperationException("Unimplemented method 'getFechaNacimiento'");
-    }
-
-    public void setFechaNacimiento(Object fechaNacimiento) {
-        throw new UnsupportedOperationException("Unimplemented method 'setFechaNacimiento'");
-    }
-
-    public Object getHoraDesayuno() {
-        throw new UnsupportedOperationException("Unimplemented method 'getHoraDesayuno'");
-    }
-
-    public void setHoraDesayuno(Object horaDesayuno) {
-        throw new UnsupportedOperationException("Unimplemented method 'setHoraDesayuno'");
+    public void setNickUsuario(String nickUsuario) {
+        this.nickUsuario = nickUsuario;
     }
    
 

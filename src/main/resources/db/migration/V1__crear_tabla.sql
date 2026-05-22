@@ -15,14 +15,14 @@ CREATE TABLE IF NOT EXISTS puesto_trabajo (
 CREATE TABLE IF NOT EXISTS usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nick_usuario VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
     contrasena VARCHAR(255) NOT NULL,
-    fecha_nacimiento DATE,
-    genero_id INT,
     nombre VARCHAR(100) NOT NULL,
-    primer_apellido VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100),
+    primer_apellido VARCHAR(100),
     segundo_apellido VARCHAR(100),
     fecha_hora_creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    hora_desayuno TIME,
+    genero_id INT,
     puesto_trabajo_id INT,
     CONSTRAINT fk_usuario_genero FOREIGN KEY (genero_id) REFERENCES genero(id),
     CONSTRAINT fk_usuario_puesto FOREIGN KEY (puesto_trabajo_id) REFERENCES puesto_trabajo(id)

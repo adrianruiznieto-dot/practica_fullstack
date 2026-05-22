@@ -56,8 +56,8 @@ public class UsuarioController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
-    public ResponseEntity<?> crearUsuario(@RequestBody UsuarioEntity usuario) {
+    @PostMapping()
+    public ResponseEntity<Object> crearUsuario(@RequestBody UsuarioEntity usuario) {
         if (usuarioRepository.existsByNickUsuario(usuario.getNickUsuario())) {
             return ResponseEntity.badRequest().body(Map.of("mensaje", "El nombre de usuario ya existe"));
         }
