@@ -3,6 +3,7 @@ package es.ediae.master.programacion.gestionusuario.service;
 import java.util.List;
 import java.util.Optional;
 
+import es.ediae.master.programacion.gestionusuario.entity.DireccionEntity;
 import es.ediae.master.programacion.gestionusuario.entity.UsuarioEntity;
 
 public interface IUsuarioServices {
@@ -12,4 +13,5 @@ public interface IUsuarioServices {
     UsuarioEntity crearUsuario(UsuarioEntity usuario);
     Optional<UsuarioEntity> actualizarUsuario(Integer id, UsuarioEntity usuarioActualizado);
     void eliminarUsuario(Integer id);
+    Optional<DireccionEntity> obtenerDireccion(Integer id);
 }

@@ -72,6 +72,9 @@ public class UsuarioService implements IUsuarioServices {
     public void eliminarUsuario(Integer id) {
         usuarioRepository.deleteById(id);
     }
+    public Optional<DireccionEntity> obtenerDireccion(Integer id) {
+        return Optional.empty();
+    }
 
     
 
