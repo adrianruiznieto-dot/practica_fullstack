@@ -10,10 +10,10 @@ public class FakeEntity {
     private Integer id;
 
     @Column
-    private String name;
+    private String nombre;
 
     @Column
-    private String password;
+    private String contrasena;
 
     @Column
     private String email;
@@ -26,20 +26,20 @@ public class FakeEntity {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getPassword() {
-        return password;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getEmail() {

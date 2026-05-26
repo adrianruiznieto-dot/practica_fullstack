@@ -20,8 +20,6 @@ public class GeneralControllerUtils {
         return response;
     }
 
-    //public static ResponseEntity crearRespuestaResponseEntity(HttpStatus httpStatus, Object data) {
-    //    return ResponseEntity.status(httpStatus).body(data);
-    //}
+    
 
 }
